@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha página</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .modo-escuro {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="comeco">
+            <h1 class="plv1">LENTE<span>VIVA</span></h1>
+            <h3 class="plv2">SERVIÇOS</h3>
+            <h3 class="plv3">BLOG</h3>
+            <h3 class="plv4">CONTATO</h3>
+            <button id="trocar-tema" class="botao">Trocar tema</button>
+            <div style="display:inline-block;vertical-align:top;">
+                <img src="HOMEM.png" alt="img" class="homem" />
+            </div>
+            <div style="display:inline-block;">
+                <h2 class="txt1">TRANSFORMANDO MOMENTOS EM MEMÓRIAS ETERNAS</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="servicos">
+                <h2 class="plv5">NOSSOS<span>SERVIÇOS</span></h2>
+                <div class="fileira">
+                    <img src="01.png" alt="" class="img">
+                    <img src="03.png" alt="" class="img">
+                    <img src="05.png" alt="" class="img">
+                </div>
+
+                <div class="textos">
+                    <p>ENSAIOS<span>FOTOGÁFICOS</span></p>
+                    <p>FOTOGRAFIA<span>AMBIENTAL</span></p>
+                    <p>ENSAIO<span>PROFISSIONAL</span></p>
+                </div>
+
+                <div class="fileira">
+                    <img src="02.png" alt="" class="img">
+                    <img src="04.png" alt="" class="img">
+                    <img src="06.png" alt="" class="img">
+                </div>
+            </div>
+        </div>
+
+        
+            <div class="blog">
+        <div class="container">        
+                <h2 class="plv6">NOSSO<span>BLOG</span></h2>
+                <img src="camera.png" alt="" class="camera">
+            </div>
+        </div>
+
+
+        <div class="conteainer">
+            <div class="CONTATO">
+                <form name="meu_form">
+
+                    <h1>Entre em contato</h1>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nomeid" placeholder="Nome" required="required" name="nome" />
+
+                    <label for="fone">Fone</label>
+                    <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+
+
+                    <textarea placeholder="Faça um comentário"></textarea>
+
+                    <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+                </form>
+                <img src="BOLSA.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="rodape">
+                <h3>SERVIÇOS</h3>
+                <h3>BLOG</h3>
+                <h3>CONTATO</h3>
+                <h1>LENTEVIVA</h1>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const trocarTema = document.getElementById("trocar-tema")
+        const body = document.body
+
+        trocarTema.addEventListener("click", () => {
+            body.classList.toggle("modo-escuro")
+        })
+
+        function Enviar() {
+
+            var nome = document.getElementById("nomeid");
+
+            if (nome.value != "") {
+                alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
