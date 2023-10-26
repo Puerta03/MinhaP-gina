@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha página</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fe7113a0a0.js" crossorigin="anonymous"></script>
     <style>
         body {
             background-color: white;
@@ -26,12 +27,12 @@
             <h3 class="plv2">SERVIÇOS</h3>
             <h3 class="plv3">BLOG</h3>
             <h3 class="plv4">CONTATO</h3>
-            <button id="trocar-tema" class="botao">Trocar tema</button>
+            <button id="trocar-tema" class="botao">Modo Noturno</button>
             <div style="display:inline-block;vertical-align:top;">
                 <img src="HOMEM.png" alt="img" class="homem" />
             </div>
             <div style="display:inline-block;">
-                <h2 class="txt1">TRANSFORMANDO MOMENTOS EM MEMÓRIAS ETERNAS</h2>
+                <h2 class="txt1">TRANSFORMANDO<br>MOMENTOS EM<br>MEMÓRIAS ETERNAS.</h2>
             </div>
         </div>
     </header>
@@ -42,7 +43,7 @@
                 <div class="fileira">
                     <img src="01.png" alt="" class="img">
                     <img src="03.png" alt="" class="img">
-                    <img src="05.png" alt="" class="img">
+                    <img src="04.png" alt="" class="img">
                 </div>
 
                 <div class="textos">
@@ -53,15 +54,15 @@
 
                 <div class="fileira">
                     <img src="02.png" alt="" class="img">
-                    <img src="04.png" alt="" class="img">
+                    <img src="05.png" alt="" class="img">
                     <img src="06.png" alt="" class="img">
                 </div>
             </div>
         </div>
 
-        
-            <div class="blog">
-        <div class="container">        
+
+        <div class="blog">
+            <div class="container">
                 <h2 class="plv6">NOSSO<span>BLOG</span></h2>
                 <img src="camera.png" alt="" class="camera">
             </div>
@@ -71,35 +72,51 @@
         <div class="conteainer">
             <div class="CONTATO">
                 <form name="meu_form">
+                    <div class="container">
+                        <h1 class="ctt">CONTATE-<span>NOS</span></h1>
+                    </div>
+                    <div class="container">
+                        <div class="contatos">
 
-                    <h1>Entre em contato</h1>
+                            <div class="oao1">
+                                <label for="nome" class="msg">NOME:</label>
+                                <input type="text" id="nomeid" required="required" name="nome" />
+                            </div>
 
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nomeid" placeholder="Nome" required="required" name="nome" />
+                            <div class="oao">
+                                <label for="fone" class="msg">TELEFONE:</label>
+                                <input type="tel" id="foneid" name="fone" />
+                            </div>
 
-                    <label for="fone">Fone</label>
-                    <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+                            <div class="oao">
+                                <label for="email" class="msg">EMAIL:</label>
+                                <input type="email" id="emailid" name="email" />
+                            </div>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+                            <div class="oao">
+                                <h2 class="mensagem">MENSAGEM:</h2>
+                                <textarea id="mensagemid"></textarea>
+                            </div>
 
 
-                    <textarea placeholder="Faça um comentário"></textarea>
+                            <input type="submit" class="enviar" onclick="Enviar();" value="ENVIAR" />
+                        </div>
 
-                    <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+                    </div>
                 </form>
-                <img src="BOLSA.png" alt="">
+                <img src="BOLSA.png" alt="" class="img1">
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="rodape">
-                <h3>SERVIÇOS</h3>
-                <h3>BLOG</h3>
-                <h3>CONTATO</h3>
-                <h1>LENTEVIVA</h1>
+
+        <div class="rodape">
+            <div class="container">
+                <h3 class="plv7">SERVIÇOS</h3>
+                <h3 class="plv8">BLOG</h3>
+                <h3 class="plv9">CONTATO</h3>
+                <h1 class="plv10">LENTE<span>VIVA</span></h1>
             </div>
         </div>
     </footer>
@@ -108,6 +125,7 @@
     <script>
         const trocarTema = document.getElementById("trocar-tema")
         const body = document.body
+        
 
         trocarTema.addEventListener("click", () => {
             body.classList.toggle("modo-escuro")
